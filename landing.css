@@ -1,0 +1,717 @@
+/* Custom Styles */
+*{
+    margin: 0;
+    padding: 0;
+    font-family:var(--bs-font-sans-serif);;
+    box-sizing: border-box;
+    
+    /* background: white; */
+}
+    
+html,body{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top right, #eed9f254, #babcf777, #b2b8f44a,#e6a5f347,#989afd44, #eed9f24d);   
+    /* background-color: radial-gradient(#eed9f276,#7779f9a2 #b2b7f4a2, #ee9efd4f,#d9d9f368); */
+
+}
+
+
+
+    
+/* start nav */
+    
+nav{
+    /* padding: 5px 30px;
+         */
+    
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom: 1px;
+    padding-left: 1px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fcf7fe93;
+    position: relative;
+    height: 70px;
+    font-weight: 500;
+    border: 3px solid white;
+    border-radius: 10px;
+    margin: 20px 50px;
+}
+
+#logo{
+    position: relative;
+    display: flex;
+}
+
+.logo{
+    padding: 2px;
+    margin-bottom: 17px;
+    margin-right: 2px;
+}
+    
+.expensio{
+    color: rgba(0, 0, 0, 0.713);
+    font-size: 28px;
+    padding-top: 6px;
+    margin-bottom: 0px;
+    font-weight: 700;
+    /* text-shadow: 1px 1px 2px rgb(82, 82, 82), 0 0 25px rgb(149, 149, 251); */
+}
+    
+nav ul{
+    display: flex;
+    gap: 2.3rem;
+    align-items: center;
+}
+    
+nav ul li{
+    list-style-type: none;
+}
+    
+nav ul li a{
+    text-decoration: none;
+    color: #696cff;
+}
+    
+li a:hover{
+    color: #5659f8;
+}
+    
+    
+.menu-icon{
+    display: none;
+}
+        
+.menu-icon i{
+    color: #696cff;
+    font-size: 30px;
+}
+  /* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    /* We don't need to change the 'nav' element itself,
+       so we remove the 'flex-direction: column'. */
+
+    /* Style the menu list as a dropdown overlay */
+    nav ul {
+        display: none;              
+        position: absolute;        
+        top: 70px;                  
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: #fcf7fe;
+        border-radius: 10px;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1000;              /* Ensure it appears on top of all other content */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Adds a nice shadow */
+    }
+
+    /* This class, toggled by JavaScript, makes the menu visible */
+    nav ul.show {
+        display: flex;
+    }
+
+    /* Adjust list item padding for the vertical menu */
+    nav ul li {
+        padding: 15px 0;
+    }
+
+    /* Make the hamburger menu icon visible on mobile */
+    .menu-icon {
+        display: flex; /* Use flex for better control if needed */
+        cursor: pointer;
+        font-size: 24px;
+    }
+}
+    
+    
+.login{
+    background-color: #696cff;
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    color: white;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+    
+.login:hover {
+    /* box-shadow: 0 10px 16px 0 #696cff5a,0 17px 50px 0 #696cff76; */
+    box-shadow: 1px 4px 8px rgba(82, 82, 82, 0.546), 0 0 25px rgba(170, 170, 235, 0.582);
+}
+    
+    
+    
+a:link {
+    color: rgba(0, 0, 0, 0.713);
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(247, 244, 244);
+    background-color: transparent; 
+}
+    /* end nav */
+    
+    /* center */
+
+
+/* image */
+
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    height: 50%;
+    width: 40%;
+    position: relative;
+    margin: auto;
+}
+
+/* Number text (1/3 etc) */
+/* .numbertext {
+    color: transparent;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+} */
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #696cff71;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #696cff;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 2
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
+/* image */
+    
+.container{
+    text-align: center;
+}
+    
+#get{
+    background-color: #696cff;
+    font-weight: 500;
+    color: white ;
+    border: none;
+}
+    
+#get:hover{
+    box-shadow: 1px 4px 8px rgba(82, 82, 82, 0.546), 0 0 25px rgba(170, 170, 235, 0.582);
+}
+    
+.container h3{
+    font-weight: bolder;
+    
+}
+    
+    
+.container p{
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 15px;
+}
+    
+#text {
+    padding-top: 40px;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform:capitalize;
+    line-height: 1.3;
+    text-align: center;
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+    h4 {
+        background-image: linear-gradient(to right,
+                    #c39bd3,
+                    #fa7ae9,
+                    #9778fe,
+                    #e18edd,
+                    #ae61f6,
+                    #c39bd3);
+        padding: 1rem;
+        border: 20px solid transparent;
+        background-clip: border-box;
+        background-clip: padding-box;
+        background-clip: content-box;
+        -webkit-background-clip: text;
+        background-clip: text;
+        --bg-size: 200%;
+        color: transparent;
+        background-size: var(--bg-size);
+        /* animation: animate 2s steps(5) infinite; */
+        animation: animate 5s linear infinite;
+        /* animation: animate 2s ease infinite; */
+    }
+    @keyframes animate {
+        to {
+            background-position: var(--bg-size);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+    /* center */
+    
+    /* feature card */
+.card {
+    transition: transform 0.5s ease;
+    text-align: center;
+}
+    
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.row h3{
+    color: rgb(59, 59, 59);
+}
+
+/* about */
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+    width: 85vw;
+    margin: 0 auto;
+}
+/* .image{
+    background: url("img/about.png") center/cover no-repeat;
+    display: flex;
+} */
+
+.content{
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.content h3{
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 3px;
+    opacity: 0.9;
+}
+.content h2:hover{
+    color: #5659f8;
+}
+.content span{
+    height: 0.5px;
+    width: 100px;
+    background: #777;
+    margin: 30px 0;
+}
+.content p{
+    padding-bottom: 10px;
+    color: #4f4f4f;
+    font-weight: 500;
+    
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+.links{
+    margin: 15px 0;
+}
+.links li{
+    border: 1px solid #777;
+    list-style: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    width: 180px;
+    text-align: center;
+}
+.links li a{
+    text-transform: uppercase;
+    color: #373737;
+    text-decoration: none;
+}
+.links li:hover{
+    border-color: #5659f8;
+}
+.links li:hover a{
+    color :#5659f8;
+}
+.vertical-line{
+    height: 30px;
+    width: 0.5px;
+    background: #777;
+    margin: 0 auto;
+}
+
+
+
+/*****************/
+
+@media(max-width: 992px){
+    .about{
+        grid-template-columns: 1f;
+        width: 60%;
+    }
+    .image{
+        height: 100vh;
+    }
+    .content{
+        height: 100vh;
+    }
+    .content h2{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .content span{
+        margin: 20px 0;
+    }
+    .content p{
+        font-size: 14px;
+    }
+    .links li a{
+        font-size: 14px;
+    }
+    .links{
+        margin: 5px 0;
+    }
+    .links li{
+        padding: 6px 10px;
+    }
+   
+}
+/* about */
+
+    
+/* work */
+
+.w {
+    background: transparent;
+    display: block;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.w h2 {
+    color: rgb(59, 59, 59);
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 3px;
+    opacity: 0.9;
+}
+
+.w h3 {
+    color: rgb(59, 59, 59);
+
+}
+
+.w h3:hover {
+    color: #696cff;
+}
+
+
+.c {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+
+}
+
+.c:hover {
+    color: #696cff;
+}
+
+.cd {
+    background-color: transparent;
+    text-transform: uppercase;
+    border: 1px solid #696cff;
+    /* border-radius: 8px;
+    padding: 10px; */
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-align: center;
+    margin: 20px;
+    width: 250px;
+    font-size: 10px;
+    height: 20%;
+    box-sizing: border-box;
+    /* Include padding and border in the element's total width and height */
+}
+
+.cd h3{
+    color: #696cff;
+}
+
+/* .cd:hover {
+    border: 1.5px solid #696cff;
+} */
+
+
+
+
+/* Responsive adjustments (optional) */
+@media (max-width: 768px) {
+    .c {
+        flex-direction: column;
+        /* Stack cards vertically on smaller screens */
+        align-items: center;
+        /* Center the cards horizontally */
+    }
+
+    .cd {
+        width: 80%;
+        /* Make cards wider on smaller screens */
+        margin-bottom: 20px;
+        /* Add spacing between stacked cards */
+    }
+}
+
+/* work */
+
+
+
+    
+    /* footer */
+    .site-footer {
+        background-image: linear-gradient(to top right, #eed9f254, #babcf777, #b2b8f44a,#e6a5f347,#989afd44, #eed9f24d);  
+        color: #444;
+        padding: 50px 10px;  
+        display: block;      
+    }
+    
+    .site-footer h3 {
+        font-size: 18px;
+        color: #444;
+    }
+    
+    .footer-content {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    
+    .footer-section {
+        flex: 1;
+        min-width: 250px;
+        margin: 20px; /* Increased margin for better spacing */
+    }
+    
+    #exp {
+        text-align: left;
+    }
+    
+    #quick {
+        text-align: center;
+    }
+    
+    #quick h3 {
+        margin-left: 0; /* Removed fixed margin for better alignment */
+    }
+    
+    #follow {
+        text-align: center;
+    }
+    
+    #follow ul {
+        margin-left: 0; /* Removed fixed margin for better alignment */
+    }
+    
+    .footer-section h3 {
+        margin-bottom: 15px;
+        font-size: 18px;
+        color: #696cff;
+        font-weight: 700;
+    }
+    
+    .footer-section p, .footer-section ul {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .footer-section ul {
+        list-style: none;
+        padding: 0; /* Remove default padding */
+    }
+    
+    .footer-section ul li {
+        margin-bottom: 10px; /* Increased margin for better spacing */
+    }
+    
+    .footer-section ul li a {
+        color: #444;
+        text-decoration: none;
+    }
+    
+    .footer-section ul li a:hover {
+        color: #696cff;
+        text-decoration: underline;
+    }
+    
+    .social-links {
+        display: flex;
+        justify-content: center; /* Center social links */
+        gap: 18px;
+        padding: 0; /* Remove default padding */
+    }
+    
+    .social-links li a {
+        color: #444; /* Changed to match the theme */
+        font-size: 20px;
+    }
+    
+    .social-links li a:hover {
+        color: #696cff;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px; /* Increased margin for better spacing */
+        padding-top: 20px; /* Increased padding for better spacing */
+        border-top: 1px solid #444;
+        font-size: 14px;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .footer-section {
+            min-width: 100%; /* Full width on smaller screens */
+            margin: 10px 0; /* Adjusted margin for better spacing */
+        }
+    
+        #exp, #quick, #follow {
+            text-align: center; /* Center all sections on smaller screens */
+        }
+    
+        #quick h3 {
+            margin-left: 0; /* Remove fixed margin */
+        }
+    
+        #follow ul {
+            margin-left: 0; /* Remove fixed margin */
+        }
+    
+        .social-links {
+            justify-content: center; /* Center social links */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .site-footer {
+            padding: 30px 10px; /* Reduced padding for smaller screens */
+        }
+    
+        .footer-section h3 {
+            font-size: 16px; /* Smaller font size for headings */
+        }
+    
+        .footer-section p, .footer-section ul {
+            font-size: 12px; /* Smaller font size for text */
+        }
+    
+        .social-links li a {
+            font-size: 18px; /* Smaller font size for social icons */
+        }
+    }
+
+
+/* arrow */
+#scroll-to-top {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    /* Ensure it's on top of other elements */
+    border: none;
+    outline: none;
+    background-color: #696cff;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+#scroll-to-top:hover {
+    opacity: 1;
+}
+
+/* Styling for the arrow icon (you can use an image or icon font instead) */
+#scroll-to-top::before {
+    content: "\2191";
+    /* Unicode for up arrow */
+}
+/* arrow */
